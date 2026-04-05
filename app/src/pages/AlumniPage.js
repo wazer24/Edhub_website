@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, Building, Globe, ArrowRight } from 'lucide-react';
+import { GraduationCap, Building, Globe, ArrowRight } from 'lucide-react';
 import VantaBackground from '../components/VantaBackground';
 
 const alumniData = [

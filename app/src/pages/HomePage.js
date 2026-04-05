@@ -1,19 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Trophy, BookOpen, Target, CheckCircle, Zap, Shield, GraduationCap, Sparkles } from 'lucide-react';
+import { ArrowRight, Users, Trophy, Target, CheckCircle } from 'lucide-react';
 import { Marquee3D } from '../components/Marquee3D';
 import RollingNumber from '../components/RollingNumber';
 import Hero from '../components/Hero';
 import Skiper31 from '../components/Skiper31';
 
-const programs = [
-  { icon: <Zap size={28} />, title: 'JEE Mains & Advanced', desc: 'Comprehensive 2-year & 1-year programs for aspiring engineers targeting IITs and NITs.', duration: '1-2 Years', batch: 'Jun & Aug', color: 'rgba(255,51,51,0.12)' },
-  { icon: <Shield size={28} />, title: 'NEET-UG', desc: 'Result-oriented medical entrance coaching with NCERT-centric pedagogy and clinical precision.', duration: '1-2 Years', batch: 'Jun & Aug', color: 'rgba(255,51,51,0.12)' },
-  { icon: <Target size={28} />, title: 'MHT-CET (PCM & PCB)', desc: 'State-focused intensive program with deep expertise in Maharashtra\'s CET pattern.', duration: '1 Year / Crash', batch: 'Mar & Jun', color: 'rgba(255,51,51,0.12)' },
-  { icon: <BookOpen size={28} />, title: 'Foundation (8th–10th)', desc: 'Build strong fundamentals early. Olympiad prep, NTSE training, and board excellence.', duration: '1-3 Years', batch: 'Jun', color: 'rgba(255,51,51,0.12)' },
-  { icon: <GraduationCap size={28} />, title: 'Board Exam Excellence', desc: 'Parallel HSC/CBSE board coaching ensuring top marks alongside competitive preparation.', duration: 'Continuous', batch: 'Ongoing', color: 'rgba(255,51,51,0.12)' },
-  { icon: <Sparkles size={28} />, title: 'Crash Courses', desc: 'High-intensity 45-90 day revision programs for last-minute score maximization.', duration: '45-90 Days', batch: 'Jan & Mar', color: 'rgba(255,51,51,0.12)' },
-];
+
 
 
 export default function HomePage() {
