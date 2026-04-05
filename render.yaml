@@ -1,0 +1,10 @@
+# Deploy the API from this repo on Render (https://render.com)
+# After deploy, set environment variables in the Render dashboard (see backend/.env.example).
+# Use MongoDB Atlas for MONGODB_URI in production — do not use MONGODB_URI=memory.
+services:
+  - type: web
+    name: education-hub-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
