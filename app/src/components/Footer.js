@@ -50,7 +50,7 @@ export default function Footer() {
 
           <div className="footer-links">
             <h4>Contact</h4>
-            <a href="tel:+919876543210"><Phone size={14} style={{ display: 'inline', marginRight: 6 }} />+91 98765 43210</a>
+            <a href="tel:+917024791967"><Phone size={14} style={{ display: 'inline', marginRight: 6 }} />+91 70247 91967</a>
             <a href="mailto:info@eduhub.in"><Mail size={14} style={{ display: 'inline', marginRight: 6 }} />info@eduhub.in</a>
             <a href="https://maps.google.com/?q=Pune+Maharashtra" target="_blank" rel="noopener noreferrer"><MapPin size={14} style={{ display: 'inline', marginRight: 6 }} />Pune, Maharashtra</a>
           </div>

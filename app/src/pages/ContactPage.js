@@ -4,8 +4,8 @@ import VantaBackground from '../components/VantaBackground';
 import { submitEnquiry } from '../api';
 
 const channels = [
-  { icon: <Phone size={22} color="var(--gold)" />, color: 'rgba(255,51,51,0.12)', title: 'Call Us', info: '+91 98765 43210', link: 'tel:+919876543210' },
-  { icon: <MessageCircle size={22} color="var(--teal)" />, color: 'rgba(255,51,51,0.12)', title: 'WhatsApp', info: '+91 98765 43210', link: 'https://wa.me/919876543210' },
+  { icon: <Phone size={22} color="var(--gold)" />, color: 'rgba(255,51,51,0.12)', title: 'Call Us', info: '+91 70247 91967', link: 'tel:+917024791967' },
+  { icon: <MessageCircle size={22} color="var(--teal)" />, color: 'rgba(255,51,51,0.12)', title: 'WhatsApp', info: '+91 70247 91967', link: 'https://wa.me/917024791967' },
   { icon: <Mail size={22} color="var(--purple)" />, color: 'rgba(255,51,51,0.12)', title: 'Email', info: 'admissions@eduhub.in', link: 'mailto:admissions@eduhub.in' },
   { icon: <MapPin size={22} color="var(--coral)" />, color: 'rgba(255,51,51,0.12)', title: 'Visit Us', info: 'Kothrud, Pune 411038, Maharashtra', link: '#map' },
 ];
@@ -138,53 +138,53 @@ export default function ContactPage() {
                 </div>
               )}
               <form onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Student Name *</label>
-                  <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full name" />
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Student Name *</label>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full name" />
+                  </div>
+                  <div className="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 70247 91967" />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Current Class *</label>
+                    <select name="classLevel" value={formData.classLevel} onChange={handleChange} required>
+                      <option value="">Select class</option>
+                      <option value="8th">8th</option>
+                      <option value="9th">9th</option>
+                      <option value="10th">10th</option>
+                      <option value="11th">11th</option>
+                      <option value="12th">12th</option>
+                      <option value="Dropper">Dropper / Repeater</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Target Exam *</label>
+                    <select name="exam" value={formData.exam} onChange={handleChange} required>
+                      <option value="">Select exam</option>
+                      <option value="jee">JEE Mains &amp; Advanced</option>
+                      <option value="neet">NEET-UG</option>
+                      <option value="mhtcet_pcm">MHT-CET (PCM)</option>
+                      <option value="mhtcet_pcb">MHT-CET (PCB)</option>
+                      <option value="foundation">Foundation / Olympiads</option>
+                      <option value="board">Board Exam Focus</option>
+                    </select>
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label>Phone Number *</label>
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 98765 43210" />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Current Class *</label>
-                  <select name="classLevel" value={formData.classLevel} onChange={handleChange} required>
-                    <option value="">Select class</option>
-                    <option value="8th">8th</option>
-                    <option value="9th">9th</option>
-                    <option value="10th">10th</option>
-                    <option value="11th">11th</option>
-                    <option value="12th">12th</option>
-                    <option value="Dropper">Dropper / Repeater</option>
-                  </select>
+                  <label>Email Address</label>
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com (optional)" />
                 </div>
                 <div className="form-group">
-                  <label>Target Exam *</label>
-                  <select name="exam" value={formData.exam} onChange={handleChange} required>
-                    <option value="">Select exam</option>
-                    <option value="jee">JEE Mains &amp; Advanced</option>
-                    <option value="neet">NEET-UG</option>
-                    <option value="mhtcet_pcm">MHT-CET (PCM)</option>
-                    <option value="mhtcet_pcb">MHT-CET (PCB)</option>
-                    <option value="foundation">Foundation / Olympiads</option>
-                    <option value="board">Board Exam Focus</option>
-                  </select>
+                  <label>Message (Optional)</label>
+                  <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Any specific questions or requirements..." rows={3} />
                 </div>
-              </div>
-              <div className="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com (optional)" />
-              </div>
-              <div className="form-group">
-                <label>Message (Optional)</label>
-                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Any specific questions or requirements..." rows={3} />
-              </div>
-              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%', justifyContent: 'center' }} disabled={submitting}>
-                {submitting ? 'Submitting…' : <>Submit Enquiry <ArrowRight size={18} /></>}
-              </button>
+                <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%', justifyContent: 'center' }} disabled={submitting}>
+                  {submitting ? 'Submitting…' : <>Submit Enquiry <ArrowRight size={18} /></>}
+                </button>
               </form>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
           <div className="cta-banner-inner">
             <h2>Still Have Questions?</h2>
             <p>Book a free one-on-one counseling session with our academic advisor. No obligations.</p>
-            <a href="https://wa.me/919876543210" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/917024791967" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
               Chat on WhatsApp <MessageCircle size={18} />
             </a>
           </div>
