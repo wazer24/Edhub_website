@@ -13,7 +13,10 @@ export async function submitEnquiry(payload) {
     });
   } catch {
     throw new Error(
-      `Cannot reach the API (${API_BASE}). Start the backend from the backend folder (npm run dev) and ensure it shows "Server listening on port 5000".`
+      `Cannot reach the API at ${API_BASE}. ` + 
+      (API_BASE.includes('localhost') 
+        ? 'Start the backend from the backend folder (npm run dev) and ensure it shows "Server listening on port 5000".'
+        : 'Please ensure your deployed backend is running and accessible.')
     );
   }
   let data = {};
