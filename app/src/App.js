@@ -10,10 +10,12 @@ import ProgrammesPage from './pages/ProgrammesPage';
 import FacultyPage from './pages/FacultyPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import Preloader from './components/Preloader';
 
 function App() {
   return (
     <>
+      <Preloader />
       <ScrollToTop />
       <Navbar />
       <main>
