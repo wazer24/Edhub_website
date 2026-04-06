@@ -11,8 +11,7 @@ export default function Hero() {
   };
 
   const handleExplore = () => {
-    const el = document.getElementById('programmes');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    navigate('/programmes');
   };
 
   return (
