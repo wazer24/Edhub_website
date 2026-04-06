@@ -143,7 +143,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== FEATURED PROGRAMS ===== */}
-      <Skiper31 />
+      <section id="programmes">
+        <Skiper31 />
+      </section>
       {/* ===== CTA BANNER ===== */}
       <section className="cta-banner">
         <div className="container">

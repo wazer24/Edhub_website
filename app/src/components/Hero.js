@@ -1,8 +1,20 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate('/contact');
+  };
+
+  const handleExplore = () => {
+    const el = document.getElementById('programmes');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero relative overflow-hidden">
       <div className="hero-container h-full relative z-10">
@@ -22,7 +34,7 @@ export default function Hero() {
             
             <div className="hero-button-group">
               <button 
-                onClick={() => alert('Registration flow would open here')}
+                onClick={handleRegister}
                 className="btn btn-primary btn-lg group"
               >
                 <span>Register Now</span>
@@ -30,7 +42,7 @@ export default function Hero() {
               </button>
               
               <button 
-                onClick={() => alert('Courses page would open here')}
+                onClick={handleExplore}
                 className="btn btn-secondary btn-lg group"
               >
                 <span>Explore Courses</span>
