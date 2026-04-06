@@ -215,7 +215,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="nav-cta" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div className="nav-cta">
             <Link 
               to="/contact" 
               className="apply-cta" 
@@ -232,24 +232,23 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div className={`mobile-menu${mobileOpen ? ' open' : ''}`} style={{ zIndex: 48 }}>
+      <div className={`mobile-menu${mobileOpen ? ' open' : ''}`}>
+        {/* Optional close button inside the overlay itself if needed, but hamburger handles it */}
         {navItems.map(item => (
           <Link 
             key={`${item.path}-mobile`} 
             to={item.path}
             ref={el => linkRefs.current[`${item.path}-mobile`] = el}
             onMouseEnter={() => handleLinkHover(`${item.path}-mobile`)}
+            onClick={() => setMobileOpen(false)}
           >
             {item.label}
           </Link>
         ))}
-        <Link 
-          to="/contact" 
-          className="apply-cta" 
-          style={{ marginTop: '1rem' }}
-          ref={el => linkRefs.current['cta-mobile'] = el}
-          onMouseEnter={() => handleLinkHover('cta-mobile')}
-        >
+      </div>
+
+      <div className="mobile-bottom-cta">
+        <Link to="/contact" className="apply-cta">
           Apply Now
         </Link>
       </div>
