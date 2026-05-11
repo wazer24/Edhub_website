@@ -104,12 +104,32 @@ export default function ContactPage() {
               </div>
 
               <h3 style={{ marginBottom: '1rem', fontSize: '1.2rem' }}>Our Location</h3>
-              <div className="map-placeholder">
-                <div style={{ textAlign: 'center' }}>
-                  <MapPin size={40} color="var(--gold)" style={{ marginBottom: '0.5rem' }} />
-                  <p>Education Hub Campus</p>
-                  <p style={{ fontSize: '0.85rem' }}>Kothrud, Pune 411038, Maharashtra</p>
+              <div className="map-embed-wrapper">
+                <div className="map-embed-header">
+                  <span className="map-pin-badge"><MapPin size={14} /> Kothrud, Pune 411038</span>
+                  <span className="map-live-badge">📍 Live Map</span>
                 </div>
+                <div className="map-frame">
+                  <iframe
+                    id="edhub-google-map"
+                    title="Education Hub Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.726484225406!2d73.82230427496736!3d18.507185982574357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf4ef3e48e09%3A0x8bc8f5a4e40e9dba!2sKothrud%2C%20Pune%2C%20Maharashtra%20411038!5e0!3m2!1sen!2sin!4v1712300000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="270"
+                    style={{ border: 0, display: 'block' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <a
+                  href="https://maps.google.com/?q=Kothrud,+Pune,+Maharashtra+411038"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-directions-btn"
+                >
+                  <MapPin size={15} /> Get Directions
+                </a>
               </div>
             </div>
 

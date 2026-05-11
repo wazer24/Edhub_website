@@ -162,7 +162,11 @@
 
 .preloader-bar-fill {
   height: 100%;
+  width: 100%;
   background: linear-gradient(90deg, #FF9933, #FFB366);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 12px rgba(255,153,51,0.6);
+  will-change: transform;
 }

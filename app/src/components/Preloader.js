@@ -118,7 +118,7 @@ export default function Preloader() {
       <div className="preloader-bar">
         <div
           className="preloader-bar-fill"
-          style={{ width: `${((wordIndex + 1) / words.length) * 100}%` }}
+          style={{ '--progress': (wordIndex + 1) / words.length }}
         />
       </div>
     </div>
