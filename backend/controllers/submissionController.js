@@ -43,7 +43,13 @@ async function createEnquiry(req, res, next) {
     status: 'New',
   });
 
-  await appendLeadToSheet({
+  res.status(201).json({
+    success: true,
+    message: 'Enquiry received successfully',
+    data: doc.toObject(),
+  });
+
+  appendLeadToSheet({
     studentName: doc.studentName,
     phone: doc.phone,
     email: doc.email,
@@ -51,12 +57,8 @@ async function createEnquiry(req, res, next) {
     targetExam: doc.targetExam,
     message: doc.message,
     date: doc.createdAt,
-  });
-
-  res.status(201).json({
-    success: true,
-    message: 'Enquiry received successfully',
-    data: doc.toObject(),
+  }).catch((err) => {
+    console.error('Background Task Failed: Google Sheets sync error for lead sync:', err);
   });
 }
 
